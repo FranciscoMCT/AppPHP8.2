@@ -1,5 +1,5 @@
 <?php
-$serverName = "10.100.0.7"; // IP da sua VM
+$serverName = "20.232.32.209"; // IP da sua VM
 $database = "Loja";
 $username = "azureuser";
 $password = "P@$$W)RD1234";
