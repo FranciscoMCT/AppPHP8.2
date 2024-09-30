@@ -1,8 +1,8 @@
 <?php
-$serverName = "seu_ip_publico"; // IP da sua VM
+$serverName = "10.100.0.7"; // IP da sua VM
 $database = "Loja";
-$username = "seu_usuario";
-$password = "sua_senha";
+$username = "azureuser";
+$password = "P@$$W)RD1234";
 
 try {
     $conn = new PDO("sqlsrv:server=$serverName;database=$database", $username, $password);
