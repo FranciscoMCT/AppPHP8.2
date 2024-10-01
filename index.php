@@ -1,19 +1,20 @@
 <?php
-// PHP Data Objects(PDO) Sample Code:
-try {
-    $conn = new PDO("sqlsrv:server = tcp:tiofranserverdb.database.windows.net,1433; Database = loja", "tiofranserverdb-admin", "sk6y5RJ5rm$R$bhI");
-    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-}
-catch (PDOException $e) {
-    print("Error connecting to SQL Server.");
-    die(print_r($e));
-}
+$serverName = "tcp:tiofranserverdb.database.windows.net,1433"; // Corrige o formato do servidor
+$database = "loja";
+$username = "tiofranserverdb-admin";
+$password = "sk6y5RJ5rm$R$bhI";
 
-// SQL Server Extension Sample Code:
-$connectionInfo = array("UID" => "tiofranserverdb-admin", "pwd" => "sk6y5RJ5rm$R$bhI", "Database" => "loja", "LoginTimeout" => 30, "Encrypt" => 1, "TrustServerCertificate" => 0);
-$serverName = "tcp:tiofranserverdb.database.windows.net,1433";
-$conn = sqlsrv_connect($serverName, $connectionInfo);
+try {
+    // Cria a conexão com o banco de dados usando PDO
+    $conn = new PDO("sqlsrv:server=$serverName;Database=$database", $username, $password);
+    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+} catch (PDOException $e) {
+    // Tratamento de erro na conexão com o banco de dados
+    echo "Erro na conexão: " . $e->getMessage();
+    die(); // Encerra o script se ocorrer um erro
+}
 ?>
+
 
 
 <!DOCTYPE html>
