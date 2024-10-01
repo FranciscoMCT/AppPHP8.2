@@ -1,5 +1,5 @@
 <?php
-$serverName = "tiofranserverdb.database.windows.net,1433"; // IP da sua VM
+$serverName = "10.0.0.4"; // IP da sua VM
 $database = "Loja";
 $username = "tiofranserverdb-admin";
 $password = "sk6y5RJ5rm$R$bhI";
