@@ -1,3 +1,17 @@
+<?php
+$serverName = "seu_ip_publico"; // IP da sua VM
+$database = "Loja";
+$username = "seu_usuario";
+$password = "sua_senha";
+
+try {
+    $conn = new PDO("sqlsrv:server=$serverName;database=$database", $username, $password);
+    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+} catch (PDOException $e) {
+    echo "Erro na conexão: " . $e->getMessage();
+}
+?>
+    
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
