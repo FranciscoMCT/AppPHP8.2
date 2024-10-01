@@ -1,15 +1,18 @@
 <?php
-$serverName = "10.0.0.4"; // IP da sua VM
-$database = "Loja";
-$username = "tiofranserverdb-admin";
-$password = "sk6y5RJ5rm$R$bhI";
-
+// PHP Data Objects(PDO) Sample Code:
 try {
-    $conn = new PDO("sqlsrv:server=$serverName;database=$database", $username, $password);
+    $conn = new PDO("sqlsrv:server = tcp:tiofranserverdb.database.windows.net,1433; Database = loja", "tiofranserverdb-admin", "sk6y5RJ5rm$R$bhI");
     $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-} catch (PDOException $e) {
-    echo "Erro na conexão: " . $e->getMessage();
 }
+catch (PDOException $e) {
+    print("Error connecting to SQL Server.");
+    die(print_r($e));
+}
+
+// SQL Server Extension Sample Code:
+$connectionInfo = array("UID" => "tiofranserverdb-admin", "pwd" => "sk6y5RJ5rm$R$bhI", "Database" => "loja", "LoginTimeout" => 30, "Encrypt" => 1, "TrustServerCertificate" => 0);
+$serverName = "tcp:tiofranserverdb.database.windows.net,1433";
+$conn = sqlsrv_connect($serverName, $connectionInfo);
 ?>
 
 
