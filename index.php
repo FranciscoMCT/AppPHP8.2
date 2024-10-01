@@ -1,17 +1,3 @@
-<?php
-$serverName = "serverdotiofran.database.windows.net"; // IP da sua VM
-$database = "Loja";
-$username = "azureuser";
-$password = "P@$$W)RD1234";
-
-try {
-    $conn = new PDO("sqlsrv:server=$serverName;database=$database", $username, $password);
-    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-} catch (PDOException $e) {
-    echo "Erro na conexão: " . $e->getMessage();
-}
-?>
-
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
