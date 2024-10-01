@@ -1,5 +1,5 @@
 <?php
-$serverName = "tcp:tiofranserverdb.database.windows.net,1433"; // Corrige o formato do servidor
+$serverName = "tcp:tiofranserverdb.privatelink.database.windows.net"; // Corrige o formato do servidor
 $database = "loja";
 $username = "tiofranserverdb-admin";
 $password = "sk6y5RJ5rm$R$bhI";
