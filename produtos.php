@@ -29,6 +29,7 @@ $produtos = $stmt->fetchAll(PDO::FETCH_ASSOC);
         <a href="index.php">Home</a>
         <a href="produtos.php">Produtos</a>
         <a href="adicionar.php">Adicionar Produto</a>
+        <a href="excluir.php">Excluir Produto></a>
     </nav>
     <ul>
         <?php foreach ($produtos as $produto): ?>
