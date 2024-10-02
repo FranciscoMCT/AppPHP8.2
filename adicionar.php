@@ -1,6 +1,6 @@
 <?php
 $serverName = "tcp:sqlserver63ujiagifce6s.database.windows.net,1433"; // Substitua pelo seu servidor
-$database = "sampledb"; // Substitua pelo seu banco de dados
+$database = "loja"; // Substitua pelo seu banco de dados
 $username = "sql"; // Substitua pelo seu usuário
 $password = "Password#1234"; // Substitua pela sua senha
 
