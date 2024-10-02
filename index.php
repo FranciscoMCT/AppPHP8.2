@@ -1,20 +1,3 @@
-<?php
-$serverName = "tcp:tiofranserverdb.privatelink.database.windows.net,1433"; // Corrige o formato do servidor
-$database = "loja";
-$username = "tiofranserverdb-admin";
-$password = "sk6y5RJ5rm$R$bhI";
-
-try {
-    // Cria a conexão com o banco de dados usando PDO
-    $conn = new PDO("sqlsrv:server=$serverName;Database=$database", $username, $password);
-    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-} catch (PDOException $e) {
-    // Tratamento de erro na conexão com o banco de dados
-    echo "Erro na conexão: " . $e->getMessage();
-    die(); // Encerra o script se ocorrer um erro
-}
-?>
-
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
