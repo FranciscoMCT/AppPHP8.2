@@ -1,8 +1,8 @@
 <?php
-$serverName = "seu_ip_publico"; // IP da sua VM
-$database = "Loja";
-$username = "seu_usuario";
-$password = "sua_senha";
+$serverName = "tcp:sqlserver63ujiagifce6s.database.windows.net,1433"; // Substitua pelo seu servidor
+$database = "sampledb"; // Substitua pelo seu banco de dados
+$username = "sql"; // Substitua pelo seu usuário
+$password = "Password#1234"; // Substitua pela sua senha
 
 try {
     $conn = new PDO("sqlsrv:server=$serverName;database=$database", $username, $password);
