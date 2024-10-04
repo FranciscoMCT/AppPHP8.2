@@ -2,7 +2,7 @@
 --$serverName = "tcp:sqlserver63ujiagifce6s.database.windows.net,1433"; // Substitua pelo seu servidor
 --$database = "loja"; // Substitua pelo seu banco de dados
 --$user = "sql"; // Substitua pelo seu usuário
---$password = "Password#12324"; // Substitua pela sua senha
+--$password = "xxxxx"; // Substitua pela sua senha
 
 try {
     $conn = new PDO("sqlsrv:server=$serverName;database=$database", $user, $password);
