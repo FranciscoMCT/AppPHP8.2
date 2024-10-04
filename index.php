@@ -4,12 +4,12 @@
 // $username = "sql"; // Substitua pelo seu usuário
 // $password = "Password#12324"; // Substitua pela sua senha
 
-// try {
+try {
 // $conn = new PDO("sqlsrv:server=$serverName;database=$database", $username, $password);
 $connection->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-// } catch (PDOException $e) {
-//    echo "Erro na conexão: " . $e->getMessage();
-// }
+} catch (PDOException $e) {
+echo "Erro na conexão: " . $e->getMessage();
+}
 // ?>
 
 <!DOCTYPE html>
