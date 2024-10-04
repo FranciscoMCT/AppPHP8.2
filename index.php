@@ -5,7 +5,7 @@
 //$password = "Password#12324"; // Substitua pela sua senha
 
 $serverName = getenv('servername');
-$database = getenv('loja');
+$database = getenv('database');
 $username = getenv('user');
 $password = getenv('password');
 
