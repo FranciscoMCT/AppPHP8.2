@@ -6,7 +6,7 @@ $username = getenv('user');
 $password = getenv('password');
 
 // Depurar variáveis para verificar seus valores
-var_dump($serverName, $database, $username, $password); // Remova isto após depuração
+//var_dump($serverName, $database, $username, $password); // Remova isto após depuração
 
 try {
     // Verifica se as variáveis estão definidas
