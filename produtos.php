@@ -1,5 +1,4 @@
 <?php
-<?php
 require 'conexao.php';
 
 $sql = "SELECT * FROM Produtos";
