@@ -28,7 +28,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         <a href="index.php">Home</a>
         <a href="produtos.php">Produtos</a>
         <a href="adicionar.php">Adicionar Produto</a>
-        <a href="excluir.php">Excluir Produto></a>
     </nav>
     <form method="POST">
         <label for="nome">Nome:</label>
