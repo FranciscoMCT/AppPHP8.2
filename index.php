@@ -10,7 +10,7 @@ $username = getenv('user');
 $password = getenv('password');
 
 try {
-$conn = new PDO("sqlsrv:server=$serverName;database=$database", $username, $password);
+$conn = new PDO("sqlsrv:server=$serverName;database=$database", "$username", "$password");
 $connection->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 } catch (PDOException $e) {
 echo "Erro na conexão: " . $e->getMessage();
