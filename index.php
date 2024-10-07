@@ -15,7 +15,6 @@ require 'conexao.php';
         <a href="index.php">Home</a>
         <a href="produtos.php">Produtos</a>
         <a href="adicionar.php">Adicionar Produto</a>
-        <a href="excluir.php">Excluir Produto></a>>
     </nav>
     <h2>Produtos Disponíveis</h2>
     <ul>
