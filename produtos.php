@@ -1,15 +1,6 @@
 <?php
-$serverName = "tcp:sqlserver63ujiagifce6s.database.windows.net,1433"; // Substitua pelo seu servidor
-$database = "loja"; // Substitua pelo seu banco de dados
-$username = "sql"; // Substitua pelo seu usuário
-$password = "Password#12324"; // Substitua pela sua senha
-
-try {
-    $conn = new PDO("sqlsrv:server=$serverName;database=$database", $username, $password);
-    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-} catch (PDOException $e) {
-    echo "Erro na conexão: " . $e->getMessage();
-}
+<?php
+require 'conexao.php';
 
 $sql = "SELECT * FROM Produtos";
 $stmt = $conn->query($sql);
