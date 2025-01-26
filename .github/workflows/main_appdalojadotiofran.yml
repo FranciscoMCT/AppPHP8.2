@@ -46,10 +46,7 @@ jobs:
     runs-on: ubuntu-latest
     needs: build
     
-    permissions:
-      id-token: write #This is required for requesting the JWT
-      contents: read #This is required for actions/checkout
-
+    
     steps:
       - name: Download artifact from build job
         uses: actions/download-artifact@v4
@@ -59,13 +56,6 @@ jobs:
       - name: Unzip artifact for deployment
         run: unzip release.zip
       
-      - name: Login to Azure
-        uses: azure/login@v2
-        with:
-          client-id: ${{ secrets.AZUREAPPSERVICE_CLIENTID_78162B91AF8C4D1DBEDAD17EE65532E2 }}
-          tenant-id: ${{ secrets.AZUREAPPSERVICE_TENANTID_4F34AA7BA08341C2A399F0FCF3F7F78D }}
-          subscription-id: ${{ secrets.AZUREAPPSERVICE_SUBSCRIPTIONID_68F81C09B0844257A915E42208799CCE }}
-
       - name: 'Deploy to Azure Web App'
         uses: azure/webapps-deploy@v3
         id: deploy-to-webapp
@@ -73,4 +63,4 @@ jobs:
           app-name: 'appdalojadotiofran'
           slot-name: 'Production'
           package: .
-          
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_6746D7DF3AAE4D31A2C8FC134E32D279 }}
