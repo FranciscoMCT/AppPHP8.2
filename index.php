@@ -10,7 +10,7 @@ require 'conexao.php';
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Bem-vindo à Loja</h1>
+    <h1>Bem-vindo à Loja Versão 2.0</h1>
     <nav>
         <a href="index.php">Home</a>
         <a href="produtos.php">Produtos</a>
